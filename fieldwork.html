@@ -31,8 +31,9 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
   padding:0 2.5rem;
   box-shadow:0 1px 8px rgba(0,0,0,0.06);
+  overflow-x: auto; /* Adds scroll on very small screens for long menus */
 }
-.nav-brand{display:flex;align-items:center;gap:0.8rem;text-decoration:none;}
+.nav-brand{display:flex;align-items:center;gap:0.8rem;text-decoration:none; flex-shrink: 0;}
 .nav-avatar{
   width:36px;height:36px;border-radius:50%;
   object-fit:cover;border:2px solid var(--blue);
@@ -42,9 +43,9 @@ nav{
   color:#000000; /* Nav name black */
   font-family:'Merriweather',serif;
 }
-.nav-links{display:flex;gap:0;list-style:none;}
+.nav-links{display:flex;gap:0;list-style:none; flex-shrink: 0;}
 .nav-links a{
-  display:block;padding:0 1rem;height:var(--nav-h);
+  display:block;padding:0 0.8rem;height:var(--nav-h);
   line-height:var(--nav-h);
   font-size:0.8rem;font-weight:500;
   color:#000000; /* Nav links black */
@@ -98,7 +99,7 @@ margin-top:0.2rem;}
 .gallery-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
 }
-.g-item{position:relative;overflow:hidden;border-radius:4px;cursor:pointer;}
+.g-item{position:relative;overflow:hidden;border-radius:4px;cursor:pointer;background:#eef2f5;}
 .g-item img{width:100%;height:190px;object-fit:cover;display:block;transition:transform 0.35s;}
 .g-item:hover img{transform:scale(1.04);}
 .g-cap{
@@ -130,7 +131,7 @@ footer a{color:var(--blue);text-decoration:none;}
 
 @media(max-width:700px){
   nav{padding:0 1rem;}
-  .nav-links a{padding:0 0.5rem;font-size:0.72rem;}
+  .nav-links a{padding:0 0.4rem;font-size:0.75rem;}
   .page{padding:calc(var(--nav-h)+2rem) 1rem 3rem;}
   .gallery-grid{grid-template-columns:1fr 1fr;}
 }
@@ -146,9 +147,12 @@ footer a{color:var(--blue);text-decoration:none;}
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="skills.html">Skills</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="fieldwork.html" class="active">Field Work</a></li>
-    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
